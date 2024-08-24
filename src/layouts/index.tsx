@@ -4,7 +4,7 @@ import { MenuBar } from '@/components';
 import { NavBar } from 'antd-mobile'
 import { useLocation } from 'umi';
 
-export default function Layout(props) {
+export default function Layout() {
   const location = useLocation();
   const paths = ['', '/order', '/user'];
 
@@ -14,7 +14,7 @@ export default function Layout(props) {
         <NavBar>{location.pathname}</NavBar>
       </div>
       <div className={styles.body}>
-        {props.children}
+        <Outlet />
       </div>
       <div className={styles.bottom}>
         <MenuBar

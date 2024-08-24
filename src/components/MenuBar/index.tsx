@@ -3,12 +3,12 @@ import { TabBar } from 'antd-mobile';
 import { BsHouseDoor, BsBag, BsPerson } from 'react-icons/bs';
 import { history, useLocation } from 'umi';
 
-export interface ItemProps {
+export interface Props {
   show?: Boolean;
   pathname?: String;
 }
 
-const MenuBar = (props: ItemProps) => {
+const MenuBar = (props: Props) => {
   const { show, pathname } = props;
   const location = useLocation()
 
