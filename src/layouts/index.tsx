@@ -1,7 +1,6 @@
-import { Link, Outlet } from 'umi';
+import { Outlet } from 'umi'
 import styles from './index.less';
 import { MenuBar } from '@/components';
-import { NavBar } from 'antd-mobile'
 import { useLocation } from 'umi';
 
 export default function Layout() {
@@ -10,9 +9,6 @@ export default function Layout() {
 
   return (
     <div className={styles.app}>
-      <div className={styles.top}>
-        <NavBar>{location.pathname}</NavBar>
-      </div>
       <div className={styles.body}>
         <Outlet />
       </div>
